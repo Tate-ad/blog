@@ -7,6 +7,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var fs = require('fs');
+var mongoose = require('mongoose');
+
+// connect to mongodb
+mongoose.connect('mongodb://localhost:27017/blog');
+
 var routes = require('./routes/index');
 var users = require('./routes/user');
 
